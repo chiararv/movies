@@ -1,0 +1,42 @@
+li {
+    list-style: none;
+    margin: 1rem 0;
+}
+
+.container {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 1rem 2rem;
+    font-size: 1.1rem;
+    line-height: 1.7rem;
+}
+
+.img {
+    margin-right: 2rem;
+}
+
+.title {
+    font-size: 2.5rem;
+    font-weight: 300;
+}
+
+.overview {
+    max-width: 700px;
+    text-align: justify;
+    padding-bottom: 1rem;
+}
+
+.genres {
+    padding-right: 1rem;
+    color: rgb(33, 150, 243);
+}
+
+.genres:hover {
+    cursor: pointer;
+    color: rgb(25, 116, 190);
+}
+
+.companies {
+    padding-right: 1rem;
+}

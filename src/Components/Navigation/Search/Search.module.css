@@ -1,0 +1,27 @@
+.container {
+    display: flex;
+    align-items: center;
+
+}
+
+.svg {
+    width: 2.5rem;
+    display: inline-block;
+    vertical-align: middle;
+    position: relative;
+    left: 3rem;
+}
+
+.input {
+    padding: .8rem 3rem;
+    font-size: 1.5rem;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    color: rgb(220, 221, 222);
+    caret-color: rgb(220, 221, 222);
+}
+
+.input:focus {
+    outline: -webkit-focus-ring-color auto 1px;
+}

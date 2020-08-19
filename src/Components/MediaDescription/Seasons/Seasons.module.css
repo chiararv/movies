@@ -1,0 +1,20 @@
+.cardsContainer {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: flex-start;
+}
+
+.select {
+    padding: .7rem 1.5rem;
+    margin: 1rem 0 1rem 1.6rem;
+    font-size: 1.3rem;
+    font-weight: 300;
+    color: rgb(220, 221, 222);
+    background-color: rgb(35, 39, 42);
+    cursor: pointer;
+    position: relative;
+    border-radius: .5rem;
+    border-width: 1px solid rgb(220, 221, 222);
+}

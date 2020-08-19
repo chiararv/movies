@@ -1,0 +1,19 @@
+.container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.link {
+    color: white;
+    margin: 1rem;
+    text-decoration: none;
+}
+
+.current {
+    background-color: red;
+    color: wheat;
+    margin: 1rem;
+    text-decoration: none;
+}
