@@ -39,7 +39,7 @@ const CategoryPage = () => {
                                 name={movie.original_title ? movie.original_title : movie.name }
                                 id={movie.id} />))}
                     </div>
-                    <Paginator url={`/${media}/${query}/page/`} page={page} totalPage={data.total_pages} />
+                    <Paginator url={`${media}/${query}/page/`} page={page} totalPage={data.total_pages} />
                 </div>
             )}
 

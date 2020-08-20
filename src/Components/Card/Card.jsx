@@ -15,7 +15,7 @@ const Card = ({ media, img, name, id, width = 'w342', character }) => {
     return (
         <div className={classes.container}>
 
-            {/* {!isLoaded && <h1>loading...</h1>} */}
+            {!isLoaded && !isError&&  <h1>loading...</h1>}
             {isError
                 ?
                 <Link to={`/${media}/${id}/info`} className={classes.link}>

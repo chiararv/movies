@@ -1,5 +1,5 @@
 import React from 'react'
-import { Switch, Route, BrowserRouter as Router, useParams, Link } from 'react-router-dom'
+import { Switch, Route, useParams, NavLink } from 'react-router-dom'
 import classes from './MediaDescription.module.css'
 import { useSearch } from '../../Utils/hooks/useSearch'
 import Info from './Info/Info'
@@ -13,7 +13,7 @@ const MediaDescription = () => {
 
     const { media, id } = useParams()
 
-    const [data, isLoading, isError] = useSearch(media, id);
+    const [data] = useSearch(media, id);
 
 
     return (
@@ -26,13 +26,60 @@ const MediaDescription = () => {
                     </div>
 
                     <div className={classes.linkContainer}>
-                        <Link to={`/${media}/${id}/info`} className={classes.link}>INFO</Link>
-                        <Link to={`/${media}/${id}/cast`} className={classes.link}>REPARTO</Link>
+                        <NavLink
+                            activeStyle={{
+                                borderBottom: "2px solid #fff",
+                                paddingBottom: "1rem"
+                            }}
+                            to={`/${media}/${id}/info`}
+                            className={classes.link}
+                        >
+                                INFO
+                        </NavLink>
+                        <NavLink
+                            activeStyle={{
+                                borderBottom: "2px solid #fff",
+                                paddingBottom: "1rem"
+                            }}
+                            to={`/${media}/${id}/cast`}
+                            className={classes.link}
+                        >
+                            REPARTO
+                        </NavLink>
                         {(media === 'movie')
-                            ? <Link to={`/${media}/${id}/videos`} className={classes.link}>VIDEOS</Link>
-                            : <Link to={`/${media}/${id}/seasons`} className={classes.link}>TEMPORADAS</Link>
+                            ? 
+                            <NavLink
+                                activeStyle={{
+                                    borderBottom: "2px solid #fff",
+                                    paddingBottom: "1rem"
+                                }}
+                                to={`/${media}/${id}/videos`}
+                                className={classes.link}
+                            >
+                                VIDEOS
+                            </NavLink>
+                            : 
+                            <NavLink
+                                activeStyle={{
+                                    borderBottom: "2px solid #fff",
+                                    paddingBottom: "1rem"
+                                }}
+                                to={`/${media}/${id}/seasons`}
+                                className={classes.link}
+                            >
+                                TEMPORADAS
+                            </NavLink>
                         }
-                        <Link to={`/${media}/${id}/similar`} className={classes.link}>SIMILARES</Link>
+                        <NavLink
+                            activeStyle={{
+                                borderBottom: "2px solid #fff",
+                                paddingBottom: "1rem"
+                            }}
+                            to={`/${media}/${id}/similar`}
+                            className={classes.link}
+                        >
+                            SIMILARES
+                        </NavLink>
                     </div>
 
                     <Switch>

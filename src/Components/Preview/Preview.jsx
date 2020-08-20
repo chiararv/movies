@@ -3,12 +3,16 @@ import Card from '../Card/Card'
 import classes from './Preview.module.css'
 import { useSearch } from '../../Utils/hooks/useSearch'
 import Loader from 'react-loader-spinner'
+import useResize from '../../Utils/hooks/useResize'
 
 const Preview = ({ media, category }) => {
 
     const [data, isLoading, isError] = useSearch(media, category);
 
-    const moviesSlice = (data && data.results.slice(0, 5))
+    const [cards] = useResize()
+    
+    const moviesSlice = (data && data.results.slice(0, cards))
+
     // console.log(moviesSlice)
     return (
         <>
@@ -29,7 +33,7 @@ const Preview = ({ media, category }) => {
                 data && !isError && !isLoading && (
                     <div className={classes.container}>
                         {
-                            moviesSlice && moviesSlice.map(movie => (<Card media={media} img={movie.poster_path} name={movie.title ? movie.title : movie.name} id={movie.id} />))
+                            moviesSlice && moviesSlice.map(movie => (<Card media={media} img={movie.poster_path} name={movie.title ? movie.title : movie.name} id={movie.id} key={movie.id}/>))
                         }
                     </div>
                 )}

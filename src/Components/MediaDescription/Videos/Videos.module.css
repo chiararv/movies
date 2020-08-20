@@ -1,6 +1,13 @@
+.videoContainer{
+    margin: 1rem 9rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 .video {
-    width: 98%;
-    height: 500px;
+    width: 660px;
+    height: 360px;
     margin: 1rem;
     border: none;
 }

@@ -23,12 +23,12 @@ const Videos = ({ media, id }) => {
             )}
 
             {data && !isError && !isLoading && (
-                <div>
+                <div className={classes.videoContainer}>
                     {(data.results.length === 0) && <h1 className={classes.title}>No se encontraron videos</h1>}
 
                     {data.results.map(video => (
                         <iframe className={classes.video}
-                            src={`https://www.youtube.com/embed/${video.key}`}>
+                            src={`https://www.youtube.com/embed/${video.key}`} title={video.key}>
                         </iframe>
                     ))}
                 </div>

@@ -11,12 +11,12 @@
 }
 
 .link {
-    font-size: 1.6rem;
+    font-size: 1.3rem;
     text-decoration: none;
     color: rgb(168, 170, 173);
     margin: 0 1rem 2rem 1rem;
     padding-bottom: 1.2rem;
-    font-weight: 700;
+    font-weight: 500;
 }
 
 .link:hover {
@@ -57,4 +57,22 @@
     background-position: bottom center;
     background-size: cover;
     object-fit: cover;
+}
+
+@media (max-width: 500px){
+    .linkContainer {
+        -webkit-box-pack: center;
+        justify-content: center;
+        flex-wrap: wrap;
+        margin: 20px 0px 10px;
+    }
+    
+    .link {
+        font-size: 1rem;
+        text-decoration: none;
+        color: rgb(168, 170, 173);
+        margin: 1rem .5rem;
+        padding-bottom: 1.2rem;
+        font-weight: 500;
+    }
 }

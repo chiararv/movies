@@ -1,6 +1,7 @@
 import React from 'react'
 import classes from './Paginator.module.css'
 import { Link } from "react-router-dom";
+import { AiOutlineArrowRight, AiOutlineArrowLeft } from 'react-icons/ai';
 
 const getItems = (current, totalPage, getUrl) => {
     const offset = 2;
@@ -26,7 +27,9 @@ const getItems = (current, totalPage, getUrl) => {
 };
 
 const Paginator = ({ url, page, totalPage }) => {
-
+    if(totalPage <= 1){
+        return null
+    }
     const getUrl = (numPage) => {
         return `/${url}${numPage}`;
     };
@@ -38,9 +41,9 @@ const Paginator = ({ url, page, totalPage }) => {
 
     return (
         <div className={classes.container}>
-            {before && <Link to={before} className={classes.link}>Anterior</Link>}
-            <h3>{items}</h3>
-            {next && <Link className={classes.link} to={next}>Siguiente</Link>}
+            {before && <Link to={before} className={classes.link}><AiOutlineArrowLeft/></Link>}
+            <div className={classes.linksContainer}>{items}</div>
+            {next && <Link className={classes.link} to={next}><AiOutlineArrowRight/></Link>}
         </div>
     );
 };

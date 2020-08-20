@@ -13,7 +13,7 @@ const Info = ({ data, media }) => {
         <div className={classes.container}>
             <img src={`https://image.tmdb.org/t/p/w342${data.poster_path}`} alt="" className={classes.img} />
 
-            <div>
+            <div className={classes.infoContainer}>
                 <h1 className={classes.title}>{(data.original_title) ? data.original_title : data.name}</h1>
 
                 <Stars number={Math.ceil(data.vote_average)} />

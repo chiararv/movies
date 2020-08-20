@@ -10,14 +10,12 @@ import {
 import { useSearch } from '../../../../Utils/hooks/useSearch';
 
 
-const SocialMedia = ({ media, id, homepage }) => {
-
-    const [data, isLoading, isError] = useSearch(media, id, 1, "external_ids");
-    // console.log('data ids', data)
+const SocialMedia = ({ media, id, homepage, personData }) => {
+    const [data] = useSearch(media, id, 1, "external_ids");
 
     const socialMediaObj = {
         imdb_id: (codigoLink) =>
-            (<a href={`https://www.imdb.com/title/${codigoLink}`}> < FaImdb className={classes.icon} /></a>),
+            (<a href={media === 'person'? `https://www.imdb.com/name/${codigoLink}` : `https://www.imdb.com/title/${codigoLink}`}> < FaImdb className={classes.icon} /></a>),
         facebook_id: (codigoLink) =>
             (<a href={`https://www.facebook.com/${codigoLink}`}> <FaFacebookSquare className={classes.icon} /></a>),
         instagram_id: (codigoLink) =>
@@ -29,7 +27,22 @@ const SocialMedia = ({ media, id, homepage }) => {
     }
     const socialMediaArr = Object.keys(socialMediaObj)
 
-    if (data) {
+
+    if(personData){
+        return (
+            <div>
+                {socialMediaArr.map(element => {
+
+                    if (element !== "homepage") {
+                        return (personData[element]) && (socialMediaObj[element](personData[element]))
+                    }
+                    return (personData.homepage && (socialMediaObj[element](homepage)))
+                })
+                }
+            </div>
+        )
+    }
+    if (!personData && data) {
         return (
             <div>
                 {socialMediaArr.map(element => {

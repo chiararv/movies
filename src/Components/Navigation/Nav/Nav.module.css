@@ -25,3 +25,16 @@
     padding-top: .2rem;
     display: inline-block;
 }
+@media (max-width: 500px){
+    .container{
+    position: fixed;
+    bottom: 0px;
+    left: 0px;
+    /* width: 100%; */
+    justify-content: space-around;
+    text-align: center;
+    z-index: 99;
+    background: black;
+    padding: 5px 0px;
+    }
+}

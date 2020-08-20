@@ -28,3 +28,13 @@
     font-weight: 300;
     align-self: flex-start;
 }
+
+@media (max-width: 500px){
+
+    .title{
+        font-size: 1.5rem;
+        margin: auto;
+        align-self: flex-start;
+        padding: 1.5rem 0;
+    }
+}

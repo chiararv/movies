@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React from 'react'
 import Loader from 'react-loader-spinner';
 import Card from '../../Card/Card';
 import { useSearch } from '../../../Utils/hooks/useSearch';

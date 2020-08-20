@@ -23,17 +23,19 @@ const Seasons = ({ seasonsNum, media, id }) => {
 
 
 
-    const [data, isLoading, isError] = useSearch(media, id, 1, seasons);
+    const [data] = useSearch(media, id, 1, seasons);
 
 
     return (
         <div>
-            <select name="Temporada" className={classes.select}
-                onChange={(e) => {
-                    setSeasons(`season/${e.target.value}`)
-                }} >
-                {options}
-            </select>
+            <div className={classes.selectContainer}>
+                <select name="Temporada" className={classes.select}
+                    onChange={(e) => {
+                        setSeasons(`season/${e.target.value}`)
+                    }} >
+                    {options}
+                </select>
+            </div>
             <div className={classes.cardsContainer}>
                 {data && data.episodes.map(episode => (
 
