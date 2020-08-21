@@ -27,3 +27,13 @@
     color: rgb(220, 221, 222);
     font-weight: 300;
 }
+@media (max-width: 600px){
+    .container {
+        align-items: center;
+
+    }
+    .cardsContainer {
+        justify-content: center;
+        align-items: center;
+    }
+}

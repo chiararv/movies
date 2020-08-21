@@ -6,3 +6,10 @@
     align-items: flex-start;
 
 }
+@media (max-width: 600px){
+    .container {
+        justify-content: center;
+        align-items: center;
+    
+    }
+}

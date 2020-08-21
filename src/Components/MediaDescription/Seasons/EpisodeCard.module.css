@@ -27,3 +27,17 @@
     text-align: justify;
     line-height: 1.5rem;
 }
+@media (max-width: 600px){
+    .figure{
+        margin: 1.5rem;
+        width: auto;
+    }
+    .img{
+        height: 200px;
+        margin-bottom: 1rem;
+        object-fit: cover;
+    }
+    .overview{
+        margin: 1rem 0 0rem 0;
+    }
+}

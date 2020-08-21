@@ -12,7 +12,10 @@ const CategoryPreview = ({ media, category }) => {
 
     return (
         <div className={classes.container}>
-            <Link to={`/${media}/${category}/page/1`} className={classes.title}> {title} <AiOutlineArrowRight className={classes.icon} /></Link>
+            <Link to={`/${media}/${category}/page/1`} className={classes.titleContainer}>
+                <p className={classes.title}>{title}</p> 
+                <AiOutlineArrowRight className={classes.icon} />
+            </Link>
             <Preview media={media} category={category} />
         </div>
     )

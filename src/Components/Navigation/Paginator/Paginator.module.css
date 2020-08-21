@@ -39,3 +39,9 @@
     margin: .3rem;
     text-decoration: none;
 }
+
+@media (max-width: 600px){
+    .container {
+        padding-bottom: 2rem;
+    }
+}

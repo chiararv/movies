@@ -6,3 +6,8 @@
     background-color: rgb(54, 57, 63);
     align-items: center;
 }
+@media (max-width: 600px){
+    .container{
+        padding-bottom: 4rem;
+    }
+}

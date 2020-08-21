@@ -7,7 +7,7 @@ const createOptions = (num) => {
     const optionsArr = []
 
     for (let i = 1; i <= num; i++) {
-        optionsArr.push(<option value={i} >Temporada {i}</option>)
+        optionsArr.push(<option key={i} value={i} >Temporada {i}</option>)
     }
 
     return optionsArr
@@ -39,7 +39,7 @@ const Seasons = ({ seasonsNum, media, id }) => {
             <div className={classes.cardsContainer}>
                 {data && data.episodes.map(episode => (
 
-                    <EpisodeCard img={episode.still_path} number={episode.episode_number} name={episode.name} overview={episode.overview} />
+                    <EpisodeCard img={episode.still_path} number={episode.episode_number} name={episode.name} overview={episode.overview} key={episode.id}  />
                 ))
                 }
             </div>

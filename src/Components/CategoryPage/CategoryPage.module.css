@@ -29,7 +29,7 @@
     align-self: flex-start;
 }
 
-@media (max-width: 500px){
+@media (max-width: 600px){
 
     .title{
         font-size: 1.5rem;

@@ -39,3 +39,11 @@
     border-radius: .5rem;
     border-width: 1px solid rgb(220, 221, 222);
 }
+@media (max-width: 600px){
+    .cardsContainer {
+        margin: 0;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+}

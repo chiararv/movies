@@ -53,13 +53,23 @@ li {
     padding-right: 1rem;
 }
 
-@media (max-width: 500px){
+@media (max-width: 600px){
  .container{
      flex-direction: column;
      align-items: center;
      margin: 2rem 0;
  }
+ .infoContainer{
+     text-align: center;
+     display: flex;
+     flex-direction: column;
+ }
  .title{
      margin-top: 2rem;
+     line-height: 2.5rem;
  }
+ .img{
+     margin: 0;
+ }
+ 
 }

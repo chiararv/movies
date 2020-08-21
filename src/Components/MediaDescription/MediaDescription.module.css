@@ -59,7 +59,7 @@
     object-fit: cover;
 }
 
-@media (max-width: 500px){
+@media (max-width: 600px){
     .linkContainer {
         -webkit-box-pack: center;
         justify-content: center;
@@ -74,5 +74,8 @@
         margin: 1rem .5rem;
         padding-bottom: 1.2rem;
         font-weight: 500;
+    }
+    .container {
+        padding-bottom: 4rem;
     }
 }

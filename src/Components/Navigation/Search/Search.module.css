@@ -24,11 +24,11 @@
     margin-left: .5rem;
 }
 
-.input:focus {
+/* .input:focus {
     outline: -webkit-focus-ring-color auto 1px;
-}
+} */
 
-@media (max-width: 500px){
+@media (max-width: 600px){
     .container{
         width: 100%;
     display: flex;

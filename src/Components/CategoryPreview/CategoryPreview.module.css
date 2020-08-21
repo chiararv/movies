@@ -13,6 +13,7 @@
     /* padding: 1rem 1rem 3rem 1rem; */
 }
 
+
 .title {
     list-style: none;
     text-decoration: none;
@@ -34,21 +35,26 @@
     transition: all 0.3s ease 0s;
 }
 
-@media (max-width: 500px){
+@media (max-width: 600px){
     .container{
         /* width: 100%; */
-        margin: 3rem;
+        /* margin: 3rem; */
         align-items: center;
+        justify-content: center;
 
     }
     .title{
         font-size: 1.5rem;
-        margin: .5rem;
+        margin: .5rem 0;
         align-self: flex-start;
-        padding: 0;
     }
-    .icon{
+    .titleContainer{
+        display: flex;
+        /* justify-content:; */
+        align-items: center;
+    }
+    /* .icon{
         position: absolute;
         right: 2rem;
-    }
+    } */
 }

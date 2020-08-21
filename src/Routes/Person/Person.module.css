@@ -1,6 +1,6 @@
 .personContainer {
     width: 100%;
-    height: 100vh;
+    height: 100%;
     display: flex;
     flex-direction: column;
     background-color: rgb(54, 57, 63);
@@ -33,3 +33,8 @@
     border-bottom: 2px solid rgb(220, 221, 222);
 }
 
+/* @media (max-width: 600px){
+    .container{
+        padding-bottom: 4rem;
+    }
+} */
